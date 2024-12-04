@@ -112,8 +112,8 @@ func hasValidDifferences(report []int) bool {
 // isDroppedReportSafe checks if a report can be made safe by removing one level.
 func isDroppedReportSafe(report []int) bool {
 	for i := range report {
-		modifiedReport := append([]int{}, report[:i]...)    // Copy the slice before index i
-		modifiedReport = append(modifiedReport, report[i+1:]...) // Add the slice after index i
+		modifiedReport := append([]int{}, report[:i]...)    
+		modifiedReport = append(modifiedReport, report[i+1:]...) 
 
 		if isReportSafe(modifiedReport) {
 			return true
